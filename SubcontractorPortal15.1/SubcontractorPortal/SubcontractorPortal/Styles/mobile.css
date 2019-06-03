@@ -1,0 +1,695 @@
+﻿/* global reset*/
+* {
+    margin:0;
+    padding:0;
+}
+
+/***** master layout *****/
+
+body {
+    background: #fff;
+    text-align: center;
+    margin:auto;
+    font-family: Helvetica; 
+}
+
+#master,#master.login {
+    width: 100%;
+    margin: auto;
+}
+
+#maincontainer {
+    width:100%;
+    text-align: left;
+    margin:0;
+    -moz-box-shadow: 0px 0px 0px #fff;
+    -webkit-box-shadow: 0px 0px 0px #fff;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+}
+
+#content {
+    background-color:White;
+    padding: 3px;
+    font-family: Helvetica; 
+/*    font: 10pt Arial;*/
+}
+
+#content p {
+    margin: 1em;
+}
+
+.floatclear {
+    width: 100%; /*IE hasLayout bug*/
+}
+
+.floatclear:after { /*clears the floats on non-IE browsers */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+img.loading {
+    display: block;
+    margin: 5em auto;
+}
+
+.overlay a.blocklink {
+    background: #eee;
+}
+
+.overlay {
+    padding: 5px;
+}
+
+/***** header/navbar/footer *****/
+
+#header, #master.login #header {
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    text-align:center;
+    background-image: none;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #9CD689, #a5f094);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9CD689), to(#a5f094));
+    /*height: 48px;*/
+}
+
+#header h1,#headerlogout {
+	float: none;
+	font: 1.5em Tahoma, Helvetica, Arial, Sans-Serif;
+    line-height:46px;
+	color: #006432;
+    margin:0 auto;
+    display:inline-block;
+    text-align:center;
+  	text-shadow: 0px 1px 1px white;
+  	font-weight:bold;
+}
+
+#headerlogout {
+    border: 1px solid #aa3200;
+    color: #aa3200;
+    padding: 7px 7px 6px;
+    vertical-align: -1px;
+    line-height: 15px;
+    margin-left: 0.5em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-shadow: 0px 1px 0px white, inset 0px 1px 0px white;
+    -webkit-box-shadow: 0px 1px 0px white, inset 0px 1px 0px white;
+    box-shadow: 0px 1px 0px white, inset 0px 1px 0px white;
+}
+
+#footer,
+#preheader,
+#navbar,
+#notification {
+    display: none;
+}
+
+#header input {
+    display:block;
+    margin:0 auto;
+    float: none;
+}
+
+#simplenavbar {
+    display:block;
+}
+
+.navbar2 li {
+    padding:0;
+    float:none;
+    display:inline-block;
+    line-height:normal;
+}
+
+.navbar2 li:not(:first-child) {
+    border-left: 1px solid #FFF;
+}
+
+.navbar2 li a {
+    font-size:1.2em;
+    text-align:center;
+    display:block;
+    padding: 10px 0;
+    font-weight:bold;
+}
+
+.navbar2 {
+    height:auto;
+    margin: 0;
+}
+
+#content h1, #content h2 {
+    font-size:12pt;
+}
+#content h2 {
+    font-size:11pt;
+}
+
+div.ac_results li {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/***** general page settings *****/
+
+button {
+    font-weight: bold;
+    border: 2px solid #888;
+    cursor: pointer;
+    padding: 2px 1em;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    font-size:medium;
+}
+
+button.urgent {
+    border: 2px solid #f66;
+}
+
+/***** login styles *****/
+
+#master.login #content h1 {
+    font-size:x-large;
+}
+
+form#passwordform {
+    font-size: large;
+}
+
+form#passwordform label {
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align:center;
+}
+
+form#passwordform button {
+    margin: auto;
+}
+
+/***** homepage styles *****/
+
+ul.list {
+    margin: 1em;
+}   
+
+li.mobile {
+    display:list-item;
+}
+li.full {
+    display:none;
+}
+
+div.messages li > div {
+    margin: 0.25em;
+    border: 1px solid #ddd;
+}
+div.messages li > div.unread {
+    border: 1px solid #888;
+}
+
+div.messages div.msgtitle,
+div.messages div.unread div.msgtitle {
+    padding:3px;
+    font-weight: normal;
+    background: #ddd;
+    padding-left: inherit;
+    overflow:hidden;
+}
+
+div.messages div.msgtitle a {
+    white-space:nowrap;
+}
+
+div.messages div.msgbody {
+    padding:3px;
+}
+
+span.msgicons img {
+    margin: 0 3px;
+}
+div.unread span.msgicons a.unreadmsg {
+    display: none;
+}
+div.read span.msgicons a.readmsg {
+    display: none;
+}
+
+a.tick {
+    background: url("../images/icons/tick.png") transparent no-repeat right;
+    padding-right: 18px;
+}
+
+div.graph {
+    width:600px;
+    height:250px;
+    margin: auto;
+}
+
+#graphs {
+    display:none;
+}    
+
+#overview, #absences {
+    display:block;
+    width: auto;
+}
+#overview + hr {
+    display:block;
+}
+
+/***** timetable styles *****/
+
+a.blocklink {
+    border: 1px solid #366;
+    padding: 2px;
+    margin: 2px;
+    font-size: medium;
+}
+
+a.blocklink:hover, input#date:hover {
+    border: 1px solid #933;
+    cursor: pointer;
+}
+
+#timetablecontrols a.blocklink:first-child,#timetablecontrols a.blocklink:last-child {
+    display:none;
+}
+
+input#date {
+    background: #fff;
+    border: 1px solid #366;
+    font: 10pt Arial;
+    padding: 2px;
+    text-align:center;
+    font-weight: normal;
+}
+
+div.controls {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+#timetable {
+    border-collapse:collapse;
+    border: 1px solid #000;
+    margin: auto;
+    width: 100%;
+}
+
+#timetable td, #timetable th {
+    display:none;
+    width:auto;    
+}
+
+#timetable td.current {
+    background: #fafafa;
+}
+
+#timetable td:first-child, #timetable th {
+    background: #ddd;
+    font-weight: bold;
+}
+
+#timetable th:first-child,
+#timetable td:first-child,
+#timetable th.current,
+#timetable td.current  {
+    display:table-cell;
+}
+
+#timetable a.full {
+    display:none;
+}
+#timetable a.mobile {
+    display:block;
+}
+
+/***** roll styles *****/
+
+div.rolloptions input {
+	display:none;
+}
+
+div.student:active {
+	background: #37f;
+}
+
+div.rolloptions {
+	width:95px;
+	height:40px;
+	float:right;
+	overflow: hidden;
+}
+
+div.rolloptions li {
+	line-height:38px;
+	height: 38px;
+	margin-bottom: 10px;
+	border: 1px solid green;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font-weight:bold;
+	text-align:center;
+    background: #3d5;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #3f7, #3c4);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3f7), to(#3d5));
+	color: white;
+	text-shadow: 0px 1px 2px black;
+}
+div.rolloptions li:nth-child(2) {
+	border: 1px solid red;
+    background: #d33;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #e55, #d33);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e55), to(#d33));
+}
+div.rolloptions li:nth-child(3) {
+	border: 1px solid blue;
+    background: #35d;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #37f, #35d);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#37f), to(#35d));
+}
+div.rolloptions li:nth-child(4) {
+	border: 1px solid purple;
+    background: #85a;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #a3f, #85a);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a3f), to(#85a));
+}
+div.rolloptions li:nth-child(5) {
+	border: 1px solid orange;
+    background: #c92;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #fa5, #c72);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fa5), to(#c72));
+}
+div.rolloptions li:nth-child(6) {
+	border: 1px solid cyan;
+    background: #c92;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #5cf, #2dd);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5cf), to(#2dd));
+}
+
+div.rolloptions li label span {
+    width: auto;
+}
+
+ul.rolloptions li label + div,
+ul.rolloptions li label + input {
+    display:none;
+}
+
+div.rolloptions > div {
+	position: relative;
+}
+
+div.studentname {
+    display:inline-block;
+    vertical-align: middle;
+    width:140px;
+}
+
+div.student
+{
+    float: none;
+    width: 95%;
+    margin: 2px 0;
+    border: solid 1px black;
+    clear:both;
+}
+
+.studentimg {
+    display:inline;
+    height: 40px;
+}
+
+.studentimg img
+{
+    display:inline;
+    height: 40px;
+    width: auto;
+    max-width: 35px;
+    margin: auto;
+    vertical-align:middle;
+}
+
+div.student > div > span
+{
+    display: block;
+    text-align: left;
+    margin: auto;
+    width:100%;
+}
+
+span.studentname 
+{
+	font-size: 13px;
+	font-weight: bold;
+	line-height: normal;
+	height: auto;
+	overflow: hidden;
+}
+
+ul.rolloptions
+{
+    display: block;
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+}
+
+#contentheader {
+    text-align:center;
+}
+
+#contentheader > * {
+    float: none;
+}
+
+#contentheader > h1 {
+    line-height: normal;
+    font-size: normal;
+    margin: 0;
+    display:inline;
+}
+
+#contentheader > h2 {
+    line-height: normal;
+    display:inline;
+}
+
+#contentheader > a, #contentheader > button {
+    float: none;
+    margin: 0 auto;
+    display:block;
+}
+
+#dialog #tableparent table td:first-child,
+#dialog #tableparent table th:first-child {
+    display: none;
+}
+    
+#dialog #tableparent {
+    width: auto;
+}
+
+/***** message styles *****/
+#compose textarea#message {
+    width: 100%;
+    height: 8em;
+    margin: 1ex 0 0 0;
+}
+
+#compose input#to {
+    width: 80%;
+}
+
+/***** settings styles *****/
+a.foldoutanchor h3 {
+    padding-left: 16px;
+    background: transparent url("/images/icons/bullet_toggle_minus.png") no-repeat;
+}
+
+a.foldoutanchor.folded h3 {
+    padding-left: 16px;
+    background: transparent url("/images/icons/bullet_toggle_plus.png") no-repeat;
+}
+
+a.resetpassword img {
+    display:block;
+    margin: 0 auto;
+}
+
+/***** student.asp styles *****/
+
+div.tooltip {
+    width: 150px;
+}
+
+#studentoverlay {
+    width: 90%;
+}
+
+#studentoverlay a.close {
+    top:0;
+    right:0;
+}
+
+#studentoverlay ul.tabs {
+    margin: 0 auto;
+    width: 100%
+}
+
+#studentoverlay ul.tabs li {
+    padding: 1ex 1em 0;
+    margin: 0;
+    border: 1px solid #eee;
+    border-width: 1px 1px 0;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+}
+
+#studentoverlay ul.tabs li.current {
+    position:relative;
+    top: -5px;
+    padding-bottom: 5px;
+    margin-bottom: -5px;
+}
+
+#studentoverlay #attendancetable {
+    font-size: smaller;
+}
+
+#studentoverlay #attendancetable th:nth-child(4) ,
+#studentoverlay #attendancetable td:nth-child(4) ,
+#studentoverlay #attendancetable th:nth-child(6) ,
+#studentoverlay #attendancetable td:nth-child(6) {
+    display: none;
+}
+
+#studentoverlay #studenttimetable td ,
+#studentoverlay #studenttimetable th {
+    display: none;
+}
+#studentoverlay #studenttimetable td:first-child ,
+#studentoverlay #studenttimetable th:first-child ,
+#studentoverlay #studenttimetable td.current ,
+#studentoverlay #studenttimetable th.current {
+    display: table-cell;
+}
+#studentoverlay #studenttimetable col {
+    display:none;
+}
+
+#studentoverlay #studenttimetable th span {
+    display: inline-block;
+}
+
+div.ttkey div {
+    width:100%;
+}
+
+#studenttimetable a.ttnext,#studenttimetable a.ttprev {
+    display: inline;
+}
+#studenttimetable th:nth-child(2) a.ttprev ,
+#studenttimetable th:last-child a.ttnext {
+    visibility:hidden;
+}
+
+#studenttimetable a.ttnext {
+    float:right;
+}
+#studenttimetable a.ttprev {
+    float:left;
+}
+
+#studenttimetable a.ttdate {
+    display:none;
+}
+
+span.ttdetail {
+    display: inline;
+}
+
+/***** myabsences styles *****/
+
+#myabsences div.overlay label {
+    width: 8em;
+    display: inline-block;
+}
+
+#myabsences div.overlay select,
+#myabsences div.overlay input {
+    width: 12em;
+}
+
+#myabsences table {
+    width: 100%;
+    margin: auto;
+}
+
+#myabsences table td:first-child{
+    width: 18px;
+}
+
+input#date {
+    padding-left: 14px;
+}
+
+
+table#dailyabsencecol2 {
+    display: none;
+}
+table#dailyabsencecol1 {
+    width: auto;
+    display: table;
+    border: none;
+}
+table#dailyabsencecol1 tr {
+    display: table-row !important;
+}
+
+/***** welfare styles *****/
+
+form.welfare label {
+    display: inline-block;
+    width: 35%;
+    /*margin-right: auto;*/
+    text-align: inherit;
+    /*vertical-align: inherit;*/
+}
+
+form.welfare input + label {
+    width: auto;
+    margin-left: 2em;
+    
+}
+
+form.welfare select,
+form.welfare textarea {
+    width: 60%;
+}
+
+form.welfare input[type=number] {
+    width: 3em;
+}
+form.welfare input.date,form.welfare input.time {
+    width: 130px;
+}
+form.welfare input + input.date {
+    width: 110px;
+}
+
+form.welfare button {
+    width: 100%;
+}

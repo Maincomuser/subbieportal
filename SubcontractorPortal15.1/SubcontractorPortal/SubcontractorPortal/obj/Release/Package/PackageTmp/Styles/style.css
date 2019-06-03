@@ -1,0 +1,66 @@
+/* reset some stuff */
+h1,h2,hr,ul,ins{margin:0px;padding:0px;border: 0px;text-decoration:none;}
+
+html { overflow-y: scroll; }
+body {		
+	background-color: #F3F3F3;		
+	font-family: Tahoma;
+	color: #333;
+	cursor: default;
+}
+
+/* set some wrapper values */
+#wrapper{
+	width: 840px;
+	margin: 0 auto 0 auto;
+}
+
+/* stuff */
+#headnote{
+	width: 700px;
+	padding: 60px 0px 60px 0px;
+	float: left;
+}
+
+
+/* a little smaller text */
+#headnote h2{
+	font-size: 12px;	
+	margin-top: -5px;
+	color: #9F14AC;
+}
+
+/* a nice little line */
+hr {
+	
+	margin: 0px -15px 50px -15px;
+	height: 2px;
+}
+
+
+#debug
+{
+    display:none;
+	background-color: white;	
+	border: 1px solid #ccc;	
+}
+
+#debug h1{
+	font-size: 12px;	
+	padding: 7px;	
+	background-color: #e0e0e0;
+	font-weight:normal;
+}
+
+#debug p{
+	font-size: 11px;	
+	padding: 7px;
+}
+
+
+
+#heading{
+	background-image: url(../img/heading.png);
+	width: 640px;
+	height: 82px;
+}

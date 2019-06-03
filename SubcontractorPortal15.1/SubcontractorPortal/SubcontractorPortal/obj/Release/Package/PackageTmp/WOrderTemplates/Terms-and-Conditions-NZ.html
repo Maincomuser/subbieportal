@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .topFont
+        {
+            font-family:Arial;
+            font-size:30px;
+            font-weight:bold;
+        }
+        .HFont
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+        }
+        .HFontR
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            text-align:right;
+        }
+        .HFontRB
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            border-right:2px solid #000000;
+        }
+
+        .reg
+        {
+            font-family:Arial;
+            font-size:16px;
+        }
+        .MFont
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+        }
+        .MFontColored
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            background-color:#C0C0C0;
+            height:30px;
+        }
+
+        .MFontLight
+        {
+            font-family:Arial;
+            font-size:16px;            
+        }
+        .MFontLightLeftBorder
+        {
+            font-family:Arial;
+            font-size:16px;  
+            border-left:2px solid #000000;          
+            text-align:center; 
+        }
+
+        .MFontLightCenter
+        {
+            font-family:Arial;
+            font-size:16px;  
+            text-align:center;     
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+        .MFontR
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            text-align:right;
+            padding-right:5px;
+        }
+        .sFont
+        {
+            font-family:Arial;
+            font-size:8px;            
+            
+        }
+
+        .del
+        {border-left:2px solid #000000;
+         width:2px;
+        }
+
+        .LeftBottomBorder
+        {
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+
+        li
+        {
+            margin-bottom:20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- OPTIONS -->
+        <table width="100%" cellspacing="3" cellpadding="3">
+            <tr>
+                <td><img src="/Images/ReportLogo.jpg" />
+                </td>
+                <td class="topFont">
+                    Terms and Conditions</td>
+            </tr>
+            <tr>
+                <td class="HFontR">Work Order No </td>
+                <td class="HFont">{WOID}</td>                
+            </tr>
+            <tr>
+                <td class="HFontR">For: </td>
+                <td><font class="HFont">{Subcontractor}</font></td>                
+            </tr>
+        </table>
+        <!-- WO BRIEF -->
+        <br />
+        <table width="100%"  cellpadding="5" cellspacing="5">
+            <tr>
+                <td class="MFontLight">
+                    Standard conditions:
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    <ul>
+                        <li>
+Under no circumstances are you to discuss or agree to any additional work with the client unless prior
+written consent from Maincom NZ Ltd.                        </li>
+                        <li>
+                            Works to be carried out must be done so in accordance with all relevant Building Codes,
+standards and comply with all current Work Place Health and Safety legislation.
+                        </li>
+                        <li>
+                           Risk assessment to be completed before the commencement of work and any potential dangers are to be
+reported to a [Maincom NZ Ltd] Supervisor immediately
+                        </li>
+                        <li>
+All Rubbish must be removed from site at the end of every working day and site must be left safe and tidy.
+                        </li>
+                        <li>
+You can acknowledge acceptance of this work order by either signing and returning the work order to us or
+commencing the work. You must complete all and only the works documented. No variation to the amount shown
+above will be paid.
+                        </li>
+                        <li>
+Where an unforseen variation is warranted on the project, the works must be approved in writing by a
+[Maincom NZ Ltd] Staff member (supervisor) prior to the additional works commencing. This will
+be done by [Maincom NZ Ltd] issuing the contractor with a second work order showing the additional
+items and agreed price for those new works.
+                        </li>
+
+                    </ul>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="MFontLight">
+                    Payment Terms:
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    <ul>
+                        <li>
+Payment in full will be made in accordance with [Maincom NZ Ltd] Payment terms and conditions upon
+[Maincom NZ Ltd] receiving a completed copy of this document, signed completion certificate and a
+legitimate Tax Invoice.
+                        </li>
+                        <li>
+[Maincom NZ Ltd] will not process any request for payment unless all three documents have been
+completed in full.                        </li>
+                        <li>
+If the client is not available to sign the completion certificate it is the contractor’s obligation to
+contact [Maincom NZ Ltd] and arrange for the supervisor to sign off on behalf of the home owner.
+
+                        </li>
+                        <li>
+You may only submit an invoice for work documented and the price noted on this work order.
+                        </li>
+
+                    </ul>
+
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
+

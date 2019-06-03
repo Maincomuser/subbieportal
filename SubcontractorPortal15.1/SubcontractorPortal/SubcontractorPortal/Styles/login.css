@@ -1,0 +1,700 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+body   
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    margin-left:0px;
+    margin-top:1px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+.YearTitle 
+{
+    font-size: 1.5em;
+    color: #ffffff;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.pageLogin 
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+    text-align:center;
+    
+}
+.pageLong
+{
+    
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /* background: #4b6c9e; */
+    
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    /* margin: 12px 8px 8px 8px;
+    margin: 12px 8px 8px 8px;  */
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: left;
+    padding-right: 10px;    
+}
+.borderButton
+{
+    text-align: left;
+    padding-right: 10px;
+    border:solid 1px #000000;
+}
+.MonthName
+{
+    font-size: 1.5em; 
+}
+.MonthNameSmall
+{
+    font-size: 1em; 
+}
+
+.calDropdowns 
+{
+    border:solid 1px #000000;
+}
+.borderless 
+{
+    border:0px;
+}
+/* -- styles for Data Grid -- */
+.mGridOverdue {     
+    border: solid 1px red; 
+    border-collapse:collapse; 
+}
+
+.mGridToday {     
+    border: solid 1px green; 
+    border-collapse:collapse; 
+}
+
+.mGrid { 
+    width: 100%; 
+    background-color: #fff; 
+    margin: 5px 0 10px 0; 
+    border: solid 1px #525252; 
+    border-collapse:collapse; 
+}
+.mGrid td { 
+    padding: 2px; 
+    border: solid 1px #c1c1c1; 
+    /* color: #717171; */
+    color:#000000;
+  font-family:Trebuchet MS;
+  font-size:11px; 
+    vertical-align:top;
+    
+}
+.mGrid th { 
+    padding: 4px 2px; 
+    color: #fff; 
+    background: #424242 url(/images/grd_head.png) repeat-x top; 
+    border-left: solid 1px #525252; 
+  font-family:Trebuchet MS;
+  font-size:11px; 
+    
+    /* font-size: 0.9em;  */
+    text-align:left;
+}
+.mGrid .alt { background: #fcfcfc url(/images/grd_alt.png) repeat-x top; }
+.mGrid .pgr { background: #424242 url(/images/grd_pgr.png) repeat-x top; }
+.mGrid .pgr table { margin: 5px 0; }
+.mGrid .pgr td { 
+    border-width: 0; 
+    padding: 0 6px; 
+    border-left: solid 1px #666; 
+    font-weight: bold; 
+    color: #fff; 
+    line-height: 12px; 
+ }   
+.mGrid .pgr a { color: yellow; text-decoration: none; }
+.mGrid .pgr a:hover { color: yellow; text-decoration: none; }
+
+/* -- END styles for Data Grid -- */
+.hand {cursor:pointer;}
+.hand2{cursor:pointer; text-decoration:underline;}
+.handBorder {cursor:pointer; border:1px solid #000000;}
+.handHidden {cursor:pointer; display:none;}
+.hiddenHandUnderline {cursor:pointer; display:none;text-decoration:underline;}
+.FrameBody   
+{
+    background: #FFFFFF;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    margin-left:0px;
+    margin-top:1px;
+    padding: 0px;
+    color: #696969;
+}
+input.menu
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: inline;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.formTBL 
+{
+    border:1px solid #000000;
+    width:99%;
+    font-family:Trebuchet MS;font-size:12px;
+}
+.formTBL select{
+    border:1px solid #C3C3C3;
+    padding:0 0 4 0;
+    font-family:Trebuchet MS;font-size:12px;
+    
+    }
+
+.tdL { text-align:left; width:50%;}
+.tdR { text-align:right;width:50%;}
+.tdRS { text-align:right;width:25%;}
+.tdLS { text-align:left; width:75%;}
+.tdRM { text-align:right;width:35%;font-family:Trebuchet MS;font-size:12px;}
+.tdLM { text-align:left; }
+.LongInput {width:80%; border:1px solid #C3C3C3;font-family:Trebuchet MS;font-size:12px;}
+.LongInputMemo {width:90%;border:1px solid #C3C3C3;font-family:Trebuchet MS;font-size:12px;}
+
+.kitItem { font-family:Trebuchet MS;font-size:12px;color:#000000; text-align:left; width:98%; border:1px solid #000;}
+
+.btn
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: inline;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+   
+.btn2
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #FFFFFF;
+    font-weight:bold; 
+    display: inline;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+   
+.withBorder { border:1px solid #A5A5A5; border-collapse:collapse;  width:100%;}
+.withBorderDouble { border:2px solid #A5A5A5; border-collapse:collapse;  width:100%;}
+.withBorderOnly { border:1px solid #A5A5A5; }
+.withBorderBlack {border:1px solid #000000; border-collapse:collapse; width:98%;}
+
+.Btn {border:1px solid #A5A5A5;border-collapse:collapse;padding: 2 2 2 2;}
+.BtnBorder {border:1px solid #FF5500;border-collapse:collapse;padding: 2 2 2 2;}
+.BtnBorderGrn {border:1px solid #00FF55;border-collapse:collapse;padding: 2 2 2 2;}
+
+.BtnOverdue
+{
+    background:url(/images/exclamation.png) transparent no-repeat 0 0;
+    background-color:#C3C3C3;
+    text-align:right;    
+    border:1px solid #FF7F7F; border-collapse:collapse; padding: 2 2 2 2;}
+.BtnToday
+{
+    background:url(/images/time.png) transparent no-repeat 0 0;
+    background-color:#C3C3C3;
+    text-align:right;    
+    border:1px solid green; border-collapse:collapse; padding: 2 2 2 2;}
+
+.dayTD 
+{
+  width:200px;
+  height:50px;   
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align:center;
+  color:#000;
+  font-weight:bold;
+  vertical-align:middle;  
+}
+.sumTD 
+{
+  width:200px;
+  height:50px;   
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align:right;
+  color:#000;  
+  vertical-align:top;  
+  font-family:Trebuchet MS;
+  font-size:12px;   
+}
+
+.scrollPanel 
+{
+  z-index:400;   
+}
+
+.itemTD 
+{
+   width:200px; 
+  height:80px;    
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align: left;
+  color:#000;  
+  vertical-align: top;  
+  cursor:pointer;
+  white-space: pre-wrap;  
+}
+
+.itemTDTask
+{
+   width:200px; 
+  height:80px;    
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align: left;
+  color:#000;  
+  vertical-align: top;  
+  cursor:pointer;
+  white-space: pre-wrap;  
+  background-color:#AAD4FF;  
+}
+
+.itemTDDisabled
+{
+   width:200px; 
+  height:80px;    
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align: left;
+  color:#000;  
+  vertical-align: top;  
+  cursor:pointer;
+  white-space: pre-wrap;  
+  background:url(/images/DiagonalCrossItem.png) transparent no-repeat center;
+}
+
+.withBorderTD
+{
+  width:200px;
+  height:200px;  
+  border-right:2px solid #A5A5A5;
+  border-bottom :2px solid #A5A5A5;
+  text-align:justify;
+  vertical-align:top;
+  font-family:Trebuchet MS;
+  font-size:10px; 
+  color:#000;
+  cursor:pointer; 
+}
+
+.TopTable 
+{
+  background-color:#C0C0C0;   
+  width:98%;
+  height:25px;
+}
+.OKmessage { color:#465C71; font-size:16px; font-weight:bold;}
+.WhiteBack { background-color:#FFFFFF;}
+.withBorderOnly2 {border:1px solid #A5A5A5;font-family:Trebuchet MS;font-size:12px;}
+
+.smallBox{height:20px;border:1px solid #A5A5A5;border-collapse:collapse;width:20px;text-align:center}
+.smallBox2{height:20px;border:1px solid #A5A5A5;border-collapse:collapse;width:30px;text-align:center}
+.DateBoxNoBorder
+{
+     background:url(/images/calendar2.gif) transparent no-repeat 0 0;
+     cursor:pointer;
+     text-align:right;
+     
+    height:20px;border:1px solid #A5A5A5;border-collapse:collapse; border-bottom:0px; width:80px;font-family:Trebuchet MS;font-size:12px;}
+.DateBoxBorder
+{
+     background:url(/images/calendar2.gif) transparent no-repeat 0 0;
+     cursor:pointer;
+     text-align:right;     
+    height:20px;border:1px solid #A5A5A5;border-collapse:collapse;  width:80px;font-family:Trebuchet MS;font-size:12px;}
+.TextBoxNoBorder  { border:0px; width:100px;}
+.err {font-size:12px; color:Red; font-weight:bold;}
+.errBig {font-size:14px; color:Red; font-weight:bold;}
+.ok {font-size:12px; color: Green; font-weight:bold;}
+.okBig {font-size:14px; color: Green; font-weight:bold;}
+.calLbl {font-size: 1.5em;}
+
+.upload { cursor:hand;background:url(/images/file.png) transparent no-repeat 0 0; background-color:#FFFFFF; border:1px solid #A5A5A5;font-family:Trebuchet MS;font-size:12px;}
+.hidden { display:none;}
+.hiddenLbl { display:none;font-size:12px; color: Green; font-weight:bold;}
+.jobLbl { font-family:Trebuchet MS; font-size:13; background-color: Yellow;}
+.formTBL2
+{
+    border:1px solid #000000;
+    width:99%;
+    font-family:Trebuchet MS;
+    font-size:12px;
+    color:#000000;
+}
+.TblTabs
+{
+    border-top:0px;
+    border-right:0px;
+    border-left:0px;
+    border-bottom:1px solid #000000;
+    width:100%; 
+    font-family:Trebuchet MS;
+    font-size:12px;
+    color:#000000;
+}
+
+.formTBLNoBorder
+{
+    border:0pc;
+    width:98%;
+    font-family:Trebuchet MS;
+    font-size:12px;
+    color:#000000;
+}
+.formTBLBtn
+{
+    border:1px solid grey;    
+    font-family:Trebuchet MS;
+    font-size:12px;
+    color:#000000;    
+}
+.SchoolName {color:red; font-family:Trebuchet MS; font-size:12px;font-weight:bold; text-transform:uppercase;}
+.catchUp {color:navy; font-family:Trebuchet MS; font-size:12px;font-weight:bold;}
+.catchUpC {color:navy; font-family:Trebuchet MS; font-size:12px;font-weight:bold; background-color:#FFAAFF; text-transform:uppercase;}
+.scaff{ text-align:center; display:inline;}
+.indiv{ text-align:right; display:inline;}
+.UCase{ text-transform:uppercase;}
+.StateItem { border-right:1px solid #C3C3C3; border-bottom:1px solid #C3C3C3;width:40px;}
+.dottedHR {color: #fff; background-color: #fff; border: 1px dotted #C3C3C3; border-style: none hannone dotted; }
+.Ind {text-align:right; padding-right:5px; font-weight:bold;}
+.Scf {text-align:right; font-weight:bold; background-color:#55FFFF;}
+.RedFontUnderline {color:green; text-decoration:underline; font-weight:bold;}
+.RedFont{color:green; font-weight:bold;}
+.catchUp {color:navy; }
+.menu{ color:#000000; font-weight:bold;}
+.cellfont { font-family:Trebuchet MS; font-size:12px; color:#000000; }
+.cellback { background-color:lightyellow;}
+.oldCell
+{
+    font-family:Trebuchet MS; font-size:12px; color:#000000;
+    background-color:lightyellow;
+    border: solid 2px black;     
+    width: 200px;
+    height:100px;
+    padding: 0px;
+}
+.scrollDiv {height:100px;width:100%;overflow-y:scroll; border:1px solid #C3C3C3;scrollbar-arrow-color: #0066C8;scrollbar-3dlight-color: #4F4F82;scrollbar-darkshadow-color: #4F4F82;scrollbar-face-color: #f4f4f0;scrollbar-highlight-color: #FFFFFF;scrollbar-shadow-color: #d0d0d0;scrollbar-track-color: #ffffff;}
+.JobTypeDiv {height:220px;width:100%;overflow-y:scroll; border:1px solid #C3C3C3;scrollbar-arrow-color: #0066C8;scrollbar-3dlight-color: #4F4F82;scrollbar-darkshadow-color: #4F4F82;scrollbar-face-color: #f4f4f0;scrollbar-highlight-color: #FFFFFF;scrollbar-shadow-color: #d0d0d0;scrollbar-track-color: #ffffff;}
+.blackfont { color:#000000; cursor:pointer;}    
+.TCBBorder { border:1px solid yellow;}   
+.KitWarn { margin:1 1 1 1; cursor:pointer; border:1px solid red; }
+.stateSwitch
+{
+    font-size: 1.5em;
+    color: #000000;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+    border:1px solid red;
+    margin:2 2 2 2;
+   
+}
+.TaskTable {border: 2px solid #FF5500; width:98%;font-family:Trebuchet MS;font-size:12px;color:#000000;}
+.rightspan { margin-left:300px; text-align:right;}
+.taskspan {background-color:#AAD4FF;}
+.note { font-weight:bold; color:#FF5500;}

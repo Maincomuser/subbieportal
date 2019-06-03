@@ -1,0 +1,289 @@
+/*
+  jQuery MegaMenu Plugin Examples CSS
+  Author: GeekTantra
+  Author URI: http://www.geektantra.com
+*/
+
+html, body {
+  height: 100%;
+}
+
+#Page {
+  width: 1000px;  
+  /*
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-collapse: collapse;
+  -moz-box-shadow: 0px 0px 10px #888;
+  -webkit-box-shadow: 0px 0px 10px #888;
+  
+      */
+  margin: auto;
+  
+  /*height: 100%;*/
+}
+
+#Links {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Georgia;
+  font-size: 22px;
+  color: #333;
+  margin: 0px;
+  padding: 20px 15px;
+}
+
+
+ul.megamenu {
+  /* background-image: url(../images/menu-background.gif);*/
+  
+   
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  text-align:center;
+  /* andrei */
+  background-color:#4E637F;  
+  height:28px; 
+  
+}
+
+.mm-content-base {
+  background-color: #FFF;
+}
+
+a:link, a:visited {
+  color: #333;
+}
+
+a:hover {
+  color: #666;
+}
+
+.jobNav
+{
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:600;
+    cursor:pointer;
+}
+h3 {
+  margin: 0px;
+  font-size: 16px;
+  padding: 5px 0px 2px;
+  /*font-family: Georgia;*/
+  font-family:Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #CCC;
+  /*font-style: italic;
+  
+  margin-bottom: 5px;*/
+}
+
+p, blockquote {
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+blockquote {
+  padding-left: 50px;
+}
+
+#tabular-content {
+  border-collapse: collapse;
+  border: 1px solid #265374;
+  font-size: 12px;
+  width: 480px;
+}
+
+#tabular-content td {
+  padding: 4px 5px;
+}
+
+#tabular-content th {
+  color: #FFF;
+  background: #254156;
+  padding: 5px;
+}
+
+#form-content {
+  margin: 0px;
+}
+#form-content fieldset {
+  border: 1px solid #CCC;
+  margin: 0px;
+  padding: 5px;
+}
+#form-content legend {
+  font-size: 11px;
+}
+#form-content .FieldLabel {
+  font-size: 11px;
+}
+
+#form-content .FieldItem {
+  margin-bottom: 5px;
+}
+
+#form-content .FieldItem input.Text {
+  width: 220px;
+  border: 1px solid #AAA;
+  outline: none;
+  padding: 5px;
+  font-size: 15px;
+}
+
+
+#list-content, #list-content ul {
+  margin: 0px;
+  padding-left: 0px;
+  list-style: none;
+}
+#list-content li {
+  margin: 0px;
+  padding: 2px 0px;
+}
+
+#list-content-1, #list-content-1 ul {
+  margin: 0px;
+  padding-left: 0px;    
+  list-style: none;    
+}
+
+#list-content-1 li  {
+  margin: 5px;
+  padding: 2px 0px;
+}
+
+
+#list-content-2, #list-content-2 ul {
+  margin: 0px;
+  padding-left: 0px;    
+  list-style: none;    
+}
+
+#list-content-2 li  {
+  margin: 5px;
+  padding: 2px 0px;
+}
+
+#list-content-3, #list-content-3 ul {
+  margin: 0px;
+  padding-left: 0px;    
+  list-style: none;    
+}
+
+#list-content-3 li  {
+  margin: 5px;
+  padding: 2px 0px;
+}
+
+#list-content-4, #list-content-4 ul {
+  margin: 0px;
+  padding-left: 0px;    
+  list-style: none;    
+}
+
+#list-content-4 li  {
+  margin: 5px;
+  padding: 2px 0px;
+}
+
+.megamenu_drop
+{
+    padding-right: 30px;
+}
+
+.megamenu_searchfield {
+	margin-top: 2px;
+	padding: 4px 4px 4px 6px;
+	width: 120px;
+	outline: none;
+    border: 1px solid #CCC;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    text-transform:uppercase;
+}
+
+.sbutton
+{
+	font: 12px Sans-Serif;
+    padding: 4px 4px 5px 6px;
+    border:solid 1px #000000;
+    background-color:#D0E4FE;
+    height:28px;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer; 
+    margin-bottom:2px;
+}
+.logout
+{
+    margin-top:2px;
+    margin-left:5px;
+    cursor:pointer;
+}
+#paragraph-content, #quote-content {
+  text-align: justify;
+}
+
+.contact_form
+{
+    text-align:left;
+    font-size: 14px;
+}
+ .contact_form .button {
+	font: bold 11px Sans-Serif;
+	padding: 7px 12px;
+	margin:9px 12px 0 0;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: background-color 0.3s;
+	-moz-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	-ms-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+  .form_element {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width: 90%;
+	padding:6px;
+	margin:12px 0 18px 0;
+    -webkit-border-radius:3px;
+	-moz-border-radius:3px;
+    border-radius:3px;
+	-webkit-transition: background-color 0.3s ease-out;
+	-moz-transition: background-color 0.3s ease-out;
+	-o-transition: background-color 0.3s ease-out;
+	-ms-transition: background-color 0.3s ease-out;
+	transition: background-color 0.3s ease-out;
+}   
+
+.form_element2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width: 90%;
+	padding:2px;
+	margin:10px 0 10px 0;
+    -webkit-border-radius:3px;
+	-moz-border-radius:3px;
+    border-radius:3px;
+	-webkit-transition: background-color 0.3s ease-out;
+	-moz-transition: background-color 0.3s ease-out;
+	-o-transition: background-color 0.3s ease-out;
+	-ms-transition: background-color 0.3s ease-out;
+	transition: background-color 0.3s ease-out;
+}   
+.form_element2:focus {
+		outline:none;
+	}

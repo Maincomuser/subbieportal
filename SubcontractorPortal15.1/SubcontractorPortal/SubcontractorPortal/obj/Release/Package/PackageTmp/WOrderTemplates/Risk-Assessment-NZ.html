@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .topFont
+        {
+            font-family:Arial;
+            font-size:30px;
+            font-weight:bold;
+        }
+        .HFont
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+        }
+        .HFontR
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            text-align:right;
+        }
+        .HFontRB
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            border-right:2px solid #000000;
+        }
+
+        .HFontsmall
+        {
+            font-family:Arial;
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        .reg
+        {
+            font-family:Arial;
+            font-size:16px;
+        }
+        .MFont
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+        }
+        .MFontColored
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            background-color:#C0C0C0;
+            height:30px;
+        }
+
+        .MFontLight
+        {
+            font-family:Arial;
+            font-size:16px; 
+            padding-left:3px;           
+        }
+        .MFontLightBottomBorder
+        {
+            font-family:Arial;
+            font-size:16px; 
+            padding-left:3px;   
+            border-bottom:2px solid #000;        
+        }
+
+        .MFontLightLeftBorder
+        {
+            font-family:Arial;
+            font-size:16px;  
+            border-left:2px solid #000000;          
+            text-align:center; 
+        }
+
+        .MFontLightCenter
+        {
+            font-family:Arial;
+            font-size:16px;  
+            text-align:center;     
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;   
+            padding-left:3px;  
+            
+        }
+
+        .MFontR
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            text-align:right;
+            padding-right:5px;
+        }
+        .sFont
+        {
+            font-family:Arial;
+            font-size:8px;            
+            
+        }
+
+        .del
+        {border-left:2px solid #000000;
+         width:2px;
+        }
+
+        .LeftBottomBorder
+        {
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+        li
+        {
+            margin-bottom:20px;
+        }
+        
+
+        .auto-style3
+        {
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+            height: 40px;
+        }
+
+        .widerow
+        {
+            height:40px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- OPTIONS -->
+        <table width="100%" cellspacing="3" cellpadding="3">
+            <tr>
+                <td><img src="/Images/ReportLogo.jpg" />
+                </td>
+                <td class="topFont">Risk Assessment</td>
+            </tr>
+            <tr>
+                <td class="HFontR">Work Order No </td>
+                <td class="HFont">{WOID}</td>                
+            </tr>
+            <tr>
+                <td class="HFontR">For: </td>
+                <td><font class="HFont">{Subcontractor}</font></td>   
+            </tr>
+        </table>
+        <br />
+        <table width="100%" >
+            <tr>                
+                <td class="MFontLight">
+To be completed and retained for your records. Risk assessment is to be completed before the commencement of work and
+any potential dangers are to be reported to {Estimator} immediately.                </td>
+            </tr>
+        </table>
+        <br />
+        
+        <!-- WorkOrder Items -->
+        <table width="100%" style="border:2px solid #000000" cellpadding="0" cellspacing="0">
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Have you been inducted by Maincom Services, are you competent and authorised to
+complete the tasks listed in the Work Order?
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Do you understand the job to be performed?                
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Have all of your tools be checked and tagged?            
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Do you have the correct PPE to perform the job?        
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Have you checked that your work will not affect others?
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Have you identified all hazards and evaluated the risk?
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+Have you considered things that could harm others?
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder">
+What were the weather conditions when carrying out work?
+                </td>
+                <td class="MFontLightCenter">
+                    Yes / No
+                </td>
+            </tr>
+            <tr class="widerow">
+                <td width="80%" class="MFontLightBottomBorder" align="right" valign="top">
+What is the source of any potential hazard? 1 - 5&nbsp;<br />
+(1 = extreme risk 5 = low risk)&nbsp;
+                </td>
+                <td class="MFontLightCenter" valign="top">
+                    <table>
+                        <tr>
+                            <td align="left">
+                                Electrical
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Gravity
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Mechanics
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Thermal
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Atomosphere
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Environmental
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Manual handling
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Slips, Trips, Falls
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="left">
+                                Chemical
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Pressure
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Propulsion
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Burns
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Noise
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Other
+                            </td>
+                            <td>
+                                _________
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+        <br />
+        <table width="40%"  cellpadding="5" cellspacing="10">
+            <tr style="height:30px;">
+                <td class="auto-style3">Signiture:</td>
+                <td class="auto-style3">{Signature}</td>
+            </tr>
+            <tr style="height:30px;">
+                <td class="auto-style3">Name:</td>
+                <td class="auto-style3">{SubcontractorName}</td>
+            </tr>
+            <tr style="height:30px;">
+                <td class="auto-style3">Date:</td>
+                <td class="auto-style3">{SignDate}</td>
+            </tr>
+
+        </table>
+    
+        
+        
+                
+    </form>
+</body>
+</html>
+

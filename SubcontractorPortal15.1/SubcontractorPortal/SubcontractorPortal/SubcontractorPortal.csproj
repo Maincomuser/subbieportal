@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13871EA6-B093-4B01-82A1-D8A63E56F005}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubcontractorPortal</RootNamespace>
+    <AssemblyName>SubcontractorPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Web, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administration\Licenses.aspx" />
+    <Content Include="blank.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\button_prev.png" />
+    <Content Include="Images\decline.png" />
+    <Content Include="Images\handshake.jpg" />
+    <Content Include="Images\hide.png" />
+    <Content Include="Images\img\handshake.jpg" />
+    <Content Include="Images\mail.png" />
+    <Content Include="Images\Maincom_Group_Logo.jpg" />
+    <Content Include="MakeSafe\CompletionCertificate.ascx" />
+    <Content Include="MakeSafe\CompletionCertificate.aspx" />
+    <Content Include="MakeSafe\Photos.ascx" />
+    <Content Include="MakeSafe\Photos.aspx" />
+    <Content Include="MakeSafe\RiskAssessment.ascx" />
+    <Content Include="MakeSafe\RiskAssessment.aspx" />
+    <Content Include="MakeSafe\TradesOnSite.ascx" />
+    <Content Include="MakeSafe\TradesOnSite.aspx" />
+    <Content Include="MakeSafe\WhatToDo.aspx" />
+    <Content Include="MakeSafe\WhatToDoCancelled.aspx" />
+    <Content Include="MakeSafe\WhatToDoProgress.aspx" />
+    <Content Include="MakeSafe\WorkOrderAudit.ascx" />
+    <Content Include="MakeSafe\WorkOrderAudit.aspx" />
+    <Content Include="MakeSafe\WorkOrderDetail.aspx" />
+    <Content Include="MakeSafe\WorkOrderList.aspx" />
+    <Content Include="MakeSafe\WorkorderListStaff.aspx" />
+    <Content Include="MakeSafe\WorkOrderView.aspx" />
+    <Content Include="PDF.aspx" />
+    <Content Include="Registration\CodeOfConduct.aspx" />
+    <Content Include="Registration\CompanyData.aspx" />
+    <Content Include="Registration\CompanyFullData.aspx" />
+    <Content Include="Registration\default.aspx" />
+    <Content Include="Registration\delete.aspx" />
+    <Content Include="Registration\InductionEnd.aspx" />
+    <Content Include="Registration\Instructions.aspx" />
+    <Content Include="Registration\NewSubContractorRequestAdmin.aspx" />
+    <Content Include="Registration\OtherConditions.aspx" />
+    <Content Include="Registration\RegistrationMandatoryDataPage.aspx" />
+    <Content Include="Registration\RegistrationWelcomePage.aspx" />
+    <Content Include="Registration\RequestsAdmin.aspx" />
+    <Content Include="Registration\Step1.aspx" />
+    <Content Include="Registration\Step10.aspx" />
+    <Content Include="Registration\Step2.aspx" />
+    <Content Include="Registration\Step20.aspx" />
+    <Content Include="Registration\Step2a.aspx" />
+    <Content Include="Registration\Step3.aspx" />
+    <Content Include="Registration\Step1a.aspx" />
+    <Content Include="Registration\Step4.aspx" />
+    <Content Include="Registration\Step40.aspx" />
+    <Content Include="Registration\Step4a.aspx" />
+    <Content Include="Registration\Step4b.aspx" />
+    <Content Include="Registration\Step5.aspx" />
+    <Content Include="Registration\WHS-Intro.aspx" />
+    <Content Include="Styles\WO.css" />
+    <Content Include="TopPageStaff.aspx" />
+    <Content Include="WOrders\CompletionCertificate.ascx" />
+    <Content Include="WOrders\CompletionCertificate.aspx" />
+    <Content Include="WOrders\Empty.html" />
+    <Content Include="WOrders\Photos.ascx" />
+    <Content Include="WOrders\Photos.aspx" />
+    <Content Include="WOrders\SearchWorkOrders.aspx" />
+    <Content Include="WOrders\SiteRiskAssessment.ascx" />
+    <Content Include="WOrders\SiteRiskAssessment.aspx" />
+    <Content Include="WOrders\SubbiePhotos.ascx" />
+    <Content Include="WOrders\SubbiePhotos.aspx" />
+    <Content Include="WOrders\TradesOnSite.ascx" />
+    <Content Include="WOrders\TradesOnSite.aspx" />
+    <Content Include="WOrders\VariationPhotos.aspx" />
+    <Content Include="WOrders\WhatToDo.aspx" />
+    <Content Include="WOrders\WhatToDoCancelled.aspx" />
+    <Content Include="WOrders\WhatToDoDispute.aspx" />
+    <Content Include="WOrders\WhatToDoProgress.aspx" />
+    <Content Include="WOrders\WhatToDoProgressNew.aspx" />
+    <Content Include="WOrders\WHS.ascx" />
+    <Content Include="WOrders\WHS.aspx" />
+    <Content Include="WOrders\WorkOrderAudit.ascx" />
+    <Content Include="WOrders\WorkOrderAudit.aspx" />
+    <Content Include="WOrders\WorkOrderInvoice.ascx" />
+    <Content Include="WOrders\WorkOrderInvoice.aspx" />
+    <Content Include="WOrderTemplates\Completion-Certificate-AU.html" />
+    <Content Include="WOrderTemplates\Completion-Certificate-NZ.html" />
+    <Content Include="WOrderTemplates\MakeSafe-Completion-Certificate.html" />
+    <Content Include="WOrderTemplates\MakeSafe-Risk-Assessment.html" />
+    <Content Include="WOrderTemplates\MakeSafe-WorkOrder-AU.html" />
+    <Content Include="WOrderTemplates\Risk-Assessment-NZ.html" />
+    <Content Include="WOrderTemplates\Terms-and-Conditions-NZ.html" />
+    <Content Include="WOrderTemplates\WHS-AU-Auto.html" />
+    <Content Include="WOrderTemplates\WHS-AU.html" />
+    <Content Include="WOrderTemplates\WorkOrder-AU.html" />
+    <Content Include="WOrders\WorkOrderDetail.aspx" />
+    <Content Include="WOrders\WorkOrderList.aspx" />
+    <Content Include="WOrders\WorkOrderView.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\arrow-left.gif" />
+    <Content Include="Images\builderhat.jpg" />
+    <Content Include="Images\Calendar.gif" />
+    <Content Include="Images\camera.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\completed.png" />
+    <Content Include="Images\dollar.png" />
+    <Content Include="Images\drag.png" />
+    <Content Include="Images\Excel.gif" />
+    <Content Include="Images\excel.jpg" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\exit.png" />
+    <Content Include="Images\face.gif" />
+    <Content Include="Images\find.png" />
+    <Content Include="Images\find_small.png" />
+    <Content Include="Images\GUILD.png" />
+    <Content Include="Images\hand.png" />
+    <Content Include="Images\home.gif" />
+    <Content Include="Images\hover.png" />
+    <Content Include="Images\img\background.jpg" />
+    <Content Include="Images\img\dropdown-b.png" />
+    <Content Include="Images\img\dropdown.png" />
+    <Content Include="Images\img\icons\mini-icons-black.png" />
+    <Content Include="Images\img\icons\mini-icons-white.png" />
+    <Content Include="Images\img\icons\social-icons.png" />
+    <Content Include="Images\img\img01.jpg" />
+    <Content Include="Images\img\img02.jpg" />
+    <Content Include="Images\img\img03.jpg" />
+    <Content Include="Images\img\img04.jpg" />
+    <Content Include="Images\img\img05.jpg" />
+    <Content Include="Images\img\img06.jpg" />
+    <Content Include="Images\img\plus.png" />
+    <Content Include="Images\img\right-b.png" />
+    <Content Include="Images\img\right.png" />
+    <Content Include="Images\job_done.png" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\LeftArrow.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\Maincom.png" />
+    <Content Include="Images\MaincomLogo.png" />
+    <Content Include="Images\menu-background.gif" />
+    <Content Include="Images\menu-background.png" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\newJob.png" />
+    <Content Include="Images\normal.png" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\point.jpg" />
+    <Content Include="Images\pressed.png" />
+    <Content Include="Images\process.gif" />
+    <Content Include="Images\process.png" />
+    <Content Include="Images\quote.jpg" />
+    <Content Include="Images\recycle.png" />
+    <Content Include="Images\reorder.jpg" />
+    <Content Include="Images\reorder.png" />
+    <Content Include="Images\ReportLogo.jpg" />
+    <Content Include="Images\resize.png" />
+    <Content Include="Images\resultset_next.png" />
+    <Content Include="Images\risk.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\Suncorp.png" />
+    <Content Include="Images\Tick.jpg" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\tick2.png" />
+    <Content Include="Images\tick3.png" />
+    <Content Include="Images\tick_empty.png" />
+    <Content Include="Images\trades.png" />
+    <Content Include="Images\tradeshat.png" />
+    <Content Include="Images\undo.png" />
+    <Content Include="Images\Upload.png" />
+    <Content Include="Images\view.gif" />
+    <Content Include="Images\view.jpg" />
+    <Content Include="Images\view.png" />
+    <Content Include="Images\wiz.jpg" />
+    <Content Include="Images\work.png" />
+    <Content Include="Images\YOUI.png" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Scripts\clipboard.js" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\dragdrop.js" />
+    <Content Include="Scripts\effects.js" />
+    <Content Include="Login.Master" />
+    <Content Include="Agreement.pdf" />
+    <Content Include="Cert.pdf" />
+    <Content Include="WOrderTemplates\Privacy Policy.pdf" />
+    <None Include="Properties\PublishProfiles\Andrei.pubxml" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.megamenu.js" />
+    <Content Include="Scripts\jquery.slidingmessage.js" />
+    <Content Include="Scripts\jquery.slidingmessage.min.js" />
+    <Content Include="Scripts\megamenu.js" />
+    <Content Include="Scripts\megamenu.min.js" />
+    <Content Include="Scripts\megamenu_plugins.js" />
+    <Content Include="Scripts\portal.js" />
+    <Content Include="Scripts\prototype.js" />
+    <Content Include="Scripts\scriptaculous.js" />
+    <Content Include="Scripts\stickynote.js" />
+    <Content Include="Scripts\trace.js" />
+    <Content Include="Styles\example.css" />
+    <Content Include="Styles\jquery.megamenu.css" />
+    <Content Include="Styles\login.css" />
+    <Content Include="Styles\megamenu.css" />
+    <Content Include="Styles\mobile.css" />
+    <Content Include="Styles\modal.css" />
+    <Content Include="Styles\portal.css" />
+    <Content Include="Styles\Search.css" />
+    <Content Include="Styles\SearchSmall.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="TopPage.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TermsNConditions\Disclaimer.pdf" />
+    <Content Include="TermsNConditions\Privacy Policy.pdf" />
+    <Content Include="TermsNConditions\TermsAndConditionsOfTrade.pdf" />
+    <Content Include="TermsNConditions\TermsAndConditionsWorkOrder.pdf" />
+    <Content Include="TermsNConditions\WWW Terms and Conditions.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WOrderTemplates\WorkOrder-Invoice-AU.html" />
+    <Content Include="WOrderTemplates\WorkOrder-NZ.html" />
+    <Content Include="WOrderTemplates\WorkOrder-Tradecom.html" />
+    <Content Include="WOrderTemplates\WorkOrder-TVR.html" />
+    <Content Include="WorkOrderSample.pdf" />
+    <Content Include="WHS.pdf" />
+    <Content Include="WO.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\Licenses.aspx.cs">
+      <DependentUpon>Licenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Licenses.aspx.designer.cs">
+      <DependentUpon>Licenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\CompletionCertificate.ascx.cs">
+      <DependentUpon>CompletionCertificate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\CompletionCertificate.ascx.designer.cs">
+      <DependentUpon>CompletionCertificate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\CompletionCertificate.aspx.cs">
+      <DependentUpon>CompletionCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\CompletionCertificate.aspx.designer.cs">
+      <DependentUpon>CompletionCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\Photos.ascx.cs">
+      <DependentUpon>Photos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\Photos.ascx.designer.cs">
+      <DependentUpon>Photos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\Photos.aspx.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\Photos.aspx.designer.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\RiskAssessment.ascx.cs">
+      <DependentUpon>RiskAssessment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\RiskAssessment.ascx.designer.cs">
+      <DependentUpon>RiskAssessment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\RiskAssessment.aspx.cs">
+      <DependentUpon>RiskAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\RiskAssessment.aspx.designer.cs">
+      <DependentUpon>RiskAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\TradesOnSite.ascx.cs">
+      <DependentUpon>TradesOnSite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\TradesOnSite.ascx.designer.cs">
+      <DependentUpon>TradesOnSite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\TradesOnSite.aspx.cs">
+      <DependentUpon>TradesOnSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\TradesOnSite.aspx.designer.cs">
+      <DependentUpon>TradesOnSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDo.aspx.cs">
+      <DependentUpon>WhatToDo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDo.aspx.designer.cs">
+      <DependentUpon>WhatToDo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDoCancelled.aspx.cs">
+      <DependentUpon>WhatToDoCancelled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDoCancelled.aspx.designer.cs">
+      <DependentUpon>WhatToDoCancelled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDoProgress.aspx.cs">
+      <DependentUpon>WhatToDoProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WhatToDoProgress.aspx.designer.cs">
+      <DependentUpon>WhatToDoProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderAudit.ascx.cs">
+      <DependentUpon>WorkOrderAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderAudit.ascx.designer.cs">
+      <DependentUpon>WorkOrderAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderAudit.aspx.cs">
+      <DependentUpon>WorkOrderAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderAudit.aspx.designer.cs">
+      <DependentUpon>WorkOrderAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderDetail.aspx.cs">
+      <DependentUpon>WorkOrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderDetail.aspx.designer.cs">
+      <DependentUpon>WorkOrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderList.aspx.cs">
+      <DependentUpon>WorkOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderList.aspx.designer.cs">
+      <DependentUpon>WorkOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkorderListStaff.aspx.cs">
+      <DependentUpon>WorkorderListStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkorderListStaff.aspx.designer.cs">
+      <DependentUpon>WorkorderListStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderView.aspx.cs">
+      <DependentUpon>WorkOrderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeSafe\WorkOrderView.aspx.designer.cs">
+      <DependentUpon>WorkOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF.aspx.cs">
+      <DependentUpon>PDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDF.aspx.designer.cs">
+      <DependentUpon>PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\CodeOfConduct.aspx.cs">
+      <DependentUpon>CodeOfConduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\CodeOfConduct.aspx.designer.cs">
+      <DependentUpon>CodeOfConduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\CompanyData.aspx.cs">
+      <DependentUpon>CompanyData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\CompanyData.aspx.designer.cs">
+      <DependentUpon>CompanyData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\CompanyFullData.aspx.cs">
+      <DependentUpon>CompanyFullData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\CompanyFullData.aspx.designer.cs">
+      <DependentUpon>CompanyFullData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\InductionEnd.aspx.cs">
+      <DependentUpon>InductionEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\InductionEnd.aspx.designer.cs">
+      <DependentUpon>InductionEnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Instructions.aspx.cs">
+      <DependentUpon>Instructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Instructions.aspx.designer.cs">
+      <DependentUpon>Instructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\NewSubContractorRequestAdmin.aspx.cs">
+      <DependentUpon>NewSubContractorRequestAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\NewSubContractorRequestAdmin.aspx.designer.cs">
+      <DependentUpon>NewSubContractorRequestAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\OtherConditions.aspx.cs">
+      <DependentUpon>OtherConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\OtherConditions.aspx.designer.cs">
+      <DependentUpon>OtherConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\RegistrationMandatoryDataPage.aspx.cs">
+      <DependentUpon>RegistrationMandatoryDataPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\RegistrationMandatoryDataPage.aspx.designer.cs">
+      <DependentUpon>RegistrationMandatoryDataPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\RegistrationWelcomePage.aspx.cs">
+      <DependentUpon>RegistrationWelcomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\RegistrationWelcomePage.aspx.designer.cs">
+      <DependentUpon>RegistrationWelcomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\RequestsAdmin.aspx.cs">
+      <DependentUpon>RequestsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\RequestsAdmin.aspx.designer.cs">
+      <DependentUpon>RequestsAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step1.aspx.cs">
+      <DependentUpon>Step1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step1.aspx.designer.cs">
+      <DependentUpon>Step1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step10.aspx.cs">
+      <DependentUpon>Step10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step10.aspx.designer.cs">
+      <DependentUpon>Step10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step2.aspx.cs">
+      <DependentUpon>Step2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step2.aspx.designer.cs">
+      <DependentUpon>Step2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step20.aspx.cs">
+      <DependentUpon>Step20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step20.aspx.designer.cs">
+      <DependentUpon>Step20.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step2a.aspx.cs">
+      <DependentUpon>Step2a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step2a.aspx.designer.cs">
+      <DependentUpon>Step2a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step3.aspx.cs">
+      <DependentUpon>Step3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step3.aspx.designer.cs">
+      <DependentUpon>Step3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step1a.aspx.cs">
+      <DependentUpon>Step1a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step1a.aspx.designer.cs">
+      <DependentUpon>Step1a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step4.aspx.cs">
+      <DependentUpon>Step4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step4.aspx.designer.cs">
+      <DependentUpon>Step4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step40.aspx.cs">
+      <DependentUpon>Step40.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step40.aspx.designer.cs">
+      <DependentUpon>Step40.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step4a.aspx.cs">
+      <DependentUpon>Step4a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step4a.aspx.designer.cs">
+      <DependentUpon>Step4a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step4b.aspx.cs">
+      <DependentUpon>Step4b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step4b.aspx.designer.cs">
+      <DependentUpon>Step4b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Step5.aspx.cs">
+      <DependentUpon>Step5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Step5.aspx.designer.cs">
+      <DependentUpon>Step5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\WHS-Intro.aspx.cs">
+      <DependentUpon>WHS-Intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\WHS-Intro.aspx.designer.cs">
+      <DependentUpon>WHS-Intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopPage.aspx.cs">
+      <DependentUpon>TopPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopPage.aspx.designer.cs">
+      <DependentUpon>TopPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopPageStaff.aspx.cs">
+      <DependentUpon>TopPageStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopPageStaff.aspx.designer.cs">
+      <DependentUpon>TopPageStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\CompletionCertificate.ascx.cs">
+      <DependentUpon>CompletionCertificate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\CompletionCertificate.ascx.designer.cs">
+      <DependentUpon>CompletionCertificate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\CompletionCertificate.aspx.cs">
+      <DependentUpon>CompletionCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\CompletionCertificate.aspx.designer.cs">
+      <DependentUpon>CompletionCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\Photos.ascx.cs">
+      <DependentUpon>Photos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\Photos.ascx.designer.cs">
+      <DependentUpon>Photos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\Photos.aspx.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\Photos.aspx.designer.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\SearchWorkOrders.aspx.cs">
+      <DependentUpon>SearchWorkOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\SearchWorkOrders.aspx.designer.cs">
+      <DependentUpon>SearchWorkOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\SiteRiskAssessment.ascx.cs">
+      <DependentUpon>SiteRiskAssessment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\SiteRiskAssessment.ascx.designer.cs">
+      <DependentUpon>SiteRiskAssessment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\SiteRiskAssessment.aspx.cs">
+      <DependentUpon>SiteRiskAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\SiteRiskAssessment.aspx.designer.cs">
+      <DependentUpon>SiteRiskAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\SubbiePhotos.ascx.cs">
+      <DependentUpon>SubbiePhotos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\SubbiePhotos.ascx.designer.cs">
+      <DependentUpon>SubbiePhotos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\SubbiePhotos.aspx.cs">
+      <DependentUpon>SubbiePhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\SubbiePhotos.aspx.designer.cs">
+      <DependentUpon>SubbiePhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\TradesOnSite.ascx.cs">
+      <DependentUpon>TradesOnSite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\TradesOnSite.ascx.designer.cs">
+      <DependentUpon>TradesOnSite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\TradesOnSite.aspx.cs">
+      <DependentUpon>TradesOnSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\TradesOnSite.aspx.designer.cs">
+      <DependentUpon>TradesOnSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\VariationPhotos.aspx.cs">
+      <DependentUpon>VariationPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\VariationPhotos.aspx.designer.cs">
+      <DependentUpon>VariationPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WhatToDo.aspx.cs">
+      <DependentUpon>WhatToDo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WhatToDo.aspx.designer.cs">
+      <DependentUpon>WhatToDo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoCancelled.aspx.cs">
+      <DependentUpon>WhatToDoCancelled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoCancelled.aspx.designer.cs">
+      <DependentUpon>WhatToDoCancelled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoDispute.aspx.cs">
+      <DependentUpon>WhatToDoDispute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoDispute.aspx.designer.cs">
+      <DependentUpon>WhatToDoDispute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoProgress.aspx.cs">
+      <DependentUpon>WhatToDoProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoProgress.aspx.designer.cs">
+      <DependentUpon>WhatToDoProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoProgressNew.aspx.cs">
+      <DependentUpon>WhatToDoProgressNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WhatToDoProgressNew.aspx.designer.cs">
+      <DependentUpon>WhatToDoProgressNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WHS.ascx.cs">
+      <DependentUpon>WHS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WHS.ascx.designer.cs">
+      <DependentUpon>WHS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WHS.aspx.cs">
+      <DependentUpon>WHS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WHS.aspx.designer.cs">
+      <DependentUpon>WHS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderAudit.ascx.cs">
+      <DependentUpon>WorkOrderAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderAudit.ascx.designer.cs">
+      <DependentUpon>WorkOrderAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderAudit.aspx.cs">
+      <DependentUpon>WorkOrderAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderAudit.aspx.designer.cs">
+      <DependentUpon>WorkOrderAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderDetail.aspx.cs">
+      <DependentUpon>WorkOrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderDetail.aspx.designer.cs">
+      <DependentUpon>WorkOrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderInvoice.ascx.cs">
+      <DependentUpon>WorkOrderInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderInvoice.ascx.designer.cs">
+      <DependentUpon>WorkOrderInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderInvoice.aspx.cs">
+      <DependentUpon>WorkOrderInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderInvoice.aspx.designer.cs">
+      <DependentUpon>WorkOrderInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderList.aspx.cs">
+      <DependentUpon>WorkOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderList.aspx.designer.cs">
+      <DependentUpon>WorkOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderView.aspx.cs">
+      <DependentUpon>WorkOrderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WOrders\WorkOrderView.aspx.designer.cs">
+      <DependentUpon>WorkOrderView.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SubcontractorDataComponents\SubcontractorDataComponents\SubcontractorDataComponents.csproj">
+      <Project>{29b11213-2d8b-4f71-85e8-065de5aa3cb3}</Project>
+      <Name>SubcontractorDataComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TEMP\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51479</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49615/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

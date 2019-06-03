@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="SubcontractorPortal.Global_asax" Language="C#" %>

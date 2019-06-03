@@ -1,0 +1,11 @@
+select * from dbo.BUSINESS_ENTITY where be_name like 'maincom%'
+
+select * from  dbo.CHART_OF_ACCOUNTS where coa_code='1111000'
+
+select coa.coa_id,bank.code +'/'+cba.account_number+'('+glc.iso_code+')'
+				 from company_bankacct cba, bank_branch bb, bank bank,chart_of_accounts coa,gl_currency glc
+				 where cba.company_id=1926
+				 and bb.bank_id=bank.bank_id
+				 and cba.branch_id=bb.branch_id
+				 and cba.coa_id=coa.coa_id
+				 and coa.fixed_gl_currency_id=glc.gl_currency_id

@@ -1,0 +1,27 @@
+﻿body {
+}
+.status
+{
+    font-family:Arial;
+    font-size:18px;
+}
+.decline
+{
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    color:red;
+}
+.accept
+{
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    color:green;
+
+}
+.detail
+{
+    font-family:Arial;
+    font-size:12px;
+}

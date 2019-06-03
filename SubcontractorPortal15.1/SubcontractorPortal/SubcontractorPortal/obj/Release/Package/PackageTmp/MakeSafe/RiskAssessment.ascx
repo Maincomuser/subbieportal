@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RiskAssessment.ascx.cs" Inherits="SubcontractorPortal.MakeSafe.RiskAssessment" %>
+<iframe src="RiskAssessment.aspx" id="WHSFrame" scrolling="auto" frameborder="0" style="width:100%"></iframe>

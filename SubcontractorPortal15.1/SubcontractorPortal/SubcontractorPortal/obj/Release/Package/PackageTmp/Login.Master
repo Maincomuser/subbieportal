@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="SubcontractorPortal.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Styles/login.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"  src="/Scripts/trace.js"></script>
+    <script type="text/javascript">
+
+
+
+        function GetHeight() {
+            var myHeight = 0;
+            if (typeof (window.innerWidth) == 'number') {
+                //Non-IE
+                myHeight = window.innerHeight;
+            } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                //IE 6+ in 'standards compliant mode'
+                myHeight = document.documentElement.clientHeight;
+            } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+                //IE 4 compatible
+                myHeight = document.body.clientHeight;
+            }
+            var new_h = (myHeight - 70);
+            //alert(new_h);
+            createCookie('bheight', new_h, 10);
+            //alert(getCookie('bheight'));
+            return myHeight;
+        }
+
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="return GetHeight();">
+    <form id="Form1" runat="server">
+    <div class="pageLogin">
+    <br /><br />
+                <asp:Image ID="Image1" runat="server" ImageAlign="Middle" 
+                    ImageUrl="~/Images/MaincomLogo.png" />
+        <br /><br />       
+        
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+    <br /><br />         
+    </div>
+
+    </form>
+</body>
+</html>

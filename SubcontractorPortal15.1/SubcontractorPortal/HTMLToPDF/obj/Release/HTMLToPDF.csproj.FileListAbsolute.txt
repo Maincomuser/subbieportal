@@ -1,0 +1,12 @@
+C:\Users\Administrator\Documents\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\HTMLToPDF.dll
+C:\Users\Administrator\Documents\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\HTMLToPDF.pdb
+C:\Users\Administrator\Documents\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.dll
+C:\Users\Administrator\Documents\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.pdb
+C:\Users\Administrator\Documents\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.csprojResolveAssemblyReference.cache
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\HTMLToPDF.dll
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\HTMLToPDF.pdb
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\wnvhtmltopdf.dll
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\bin\wnvinternal.dat
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.dll
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.pdb
+C:\Development\EstimatorProject\Estimator\MaincomServices\HTMLToPDF\obj\Release\HTMLToPDF.csprojResolveAssemblyReference.cache

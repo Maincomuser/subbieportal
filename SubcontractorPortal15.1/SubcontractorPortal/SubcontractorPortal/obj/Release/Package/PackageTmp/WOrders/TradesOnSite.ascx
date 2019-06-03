@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TradesOnSite.ascx.cs" Inherits="SubcontractorPortal.WOrders.TradesOnSite" %>
+<iframe src="TradesOnSite.aspx" id="TradesFrame" scrolling="auto" frameborder="0" style="width:100%"></iframe>

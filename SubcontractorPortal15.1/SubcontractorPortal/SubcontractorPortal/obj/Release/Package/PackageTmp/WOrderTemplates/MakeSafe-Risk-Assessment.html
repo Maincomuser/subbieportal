@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .topFont
+        {
+            font-family:Arial;
+            font-size:30px;
+            font-weight:bold;
+        }
+        .HFont
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+        }
+        .HFontR
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            text-align:right;
+        }
+        .HFontRB
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            border-right:2px solid #000000;
+        }
+
+        .reg
+        {
+            font-family:Arial;
+            font-size:16px;
+        }
+        .MFont
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+        }
+        .MFontColored
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            background-color:#C0C0C0;
+            height:30px;
+        }
+
+        .MFontLight
+        {
+            font-family:Arial;
+            font-size:16px;            
+        }
+        .MFontLightLeftBorder
+        {
+            font-family:Arial;
+            font-size:16px;  
+            border-left:2px solid #000000;          
+            text-align:center; 
+        }
+
+        .MFontLightCenter
+        {
+            font-family:Arial;
+            font-size:16px;  
+            text-align:center;     
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+        .MFontR
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            text-align:right;
+            padding-right:5px;
+        }
+        .sFont
+        {
+            font-family:Arial;
+            font-size:8px;            
+            
+        }
+
+        .del
+        {border-left:2px solid #000000;
+         width:2px;
+        }
+
+        .LeftBottomBorder
+        {
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+
+        li
+        {
+            margin-bottom:20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- OPTIONS -->
+        <table width="100%" cellspacing="3" cellpadding="3">
+            <tr>
+                <td><img src="/Images/ReportLogo.jpg" />
+                </td>
+                <td class="topFont">
+                    RISK ASSESSMENT</td>
+            </tr>
+            <tr>
+                <td class="HFontR">Make Safe WO No: </td>
+                <td class="HFont">{WOID}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maincom Ref:&nbsp;{SEARCH_CODE}</td>                
+            </tr>
+            <tr>
+                <td class="HFontR">Work Order Date: </td>
+                <td class="HFont">{WODate}</td>                
+            </tr>
+            <tr>
+                <td class="HFontR">For: </td>
+                <td><font class="HFont">{Subcontractor}</font><font class="reg"> &nbsp;&nbsp;(Subcontractor')</font></td>                
+            </tr>
+        </table>
+        <!-- WO BRIEF -->
+        <br />
+        <table width="100%"  cellpadding="5" cellspacing="5">
+            <tr>
+                <td class="MFontLight">
+For the purpose of this Statement a “subcontractor” is a person (or other legal entity) that has entered into a contract with a
+“principal contractor” to carry out work.<br /><br />
+This Statement must be signed by a “subcontractor” (or person who is authorised, or held out as being authorised, to sign the
+statement by the subcontractor) where the “subcontractor” has performed contract works and has complied with the WHS
+obligations in performing the works. The signed Statement is to be submitted to along with final Tax Invoice for payment.
+
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table width="100%"  cellpadding="5" cellspacing="5">
+            <tr style="height:30px;">
+                <td class="MFont">SUBCONTRACTOR’S STATEMENT</td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    Subcontractor:&nbsp;{Subcontractor}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ABN:&nbsp;{ABN}
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    Contract number/identifier:&nbsp;{ContractNo}
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    This Statement applies for work between:&nbsp;{WOStartDate}&nbsp;and&nbsp;{WOCompleteDate}&nbsp;Inclusive
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    Subject of payment claim dated: ____/____/_____________
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    I,&nbsp;{SubcontractorName}&nbsp;a Director or a person authorised by the Subcontractor on whose
+behalf this declaration is made, hereby declare that I am in a position to know the truth of the matters which are contained
+in this Subcontractor’s WHS Statement and declare the following to the best of my knowledge and belief:
+                </td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    <ol type="a">
+                        <li>
+The above mentioned Subcontractor has performed a Site Risk Assessment prior to commencing the works and has
+identified and addressed and/or eliminated all the risks prior to commencement of any works.
+                        </li>
+                        <li>
+                            All workers have been made aware of all the risks and procedure of works to be performed via toolbox talks.
+                        </li>
+                        <li>
+                            All workers have followed the Maincom Services site safety rules at all times.
+                        </li>
+                        <li>
+                            Site Specific Safe Work Method Statements (SWMS) have been signed and dated by all workers and a copy of signed
+SWMS kept on site during works.
+                        </li>
+                        <li>
+                            Relevant Safety Data Sheets were readily available on site and Hazardous Chemicals/Substances register kept up to date.
+                        </li>
+                        <li>
+                            Tools and Equipment inspected and electrical equipment tagged.
+                        </li>
+                        <li>
+                            All workers had the required PPE (safety boots, gloves, glasses etc) to perform the works.
+                        </li>
+                        <li>
+                            Any incident or near miss relating to this job was reported straight away to the Supervisor as highlighted on this relevant
+Work Order.
+                        </li>
+                        <li>
+                            All Consent and/or compliance certificates have been approved signed and will be provided with this document to Maincom
+                        </li>
+
+                    </ol>
+                </td>
+            </tr>
+
+        </table>
+        <table width="100%"  cellpadding="5" cellspacing="5">
+            <tr>
+                <td class="MFontLight">Signature</td>
+                <td class="MFontLight">{Signature}</td>
+                <td class="MFontLight">Full Name</td>
+                <td class="MFontLight">{SubcontractorName}</td>
+            </tr>
+            <tr>
+                <td class="MFontLight">Position/Title:</td>
+                <td class="MFontLight">{SubcontractorPosition}</td>
+                <td class="MFontLight">Date</td>
+                <td class="MFontLight">{SignDate}</td>
+            </tr>
+
+        </table>
+        
+    </form>
+</body>
+</html>
+

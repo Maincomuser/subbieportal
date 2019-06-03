@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .topFont
+        {
+            font-family:Arial;
+            font-size:30px;
+            font-weight:bold;
+        }
+        .HFont
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+        }
+        .HFontR
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            text-align:right;
+        }
+        .HFontRB
+        {
+            font-family:Arial;
+            font-size:20px;
+            font-weight:bold;
+            border-right:2px solid #000000;
+        }
+
+        .HFontsmall
+        {
+            font-family:Arial;
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        .reg
+        {
+            font-family:Arial;
+            font-size:16px;
+        }
+        .MFont
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+        }
+        .MFontColored
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            background-color:#C0C0C0;
+            height:30px;
+        }
+
+        .MFontLight
+        {
+            font-family:Arial;
+            font-size:16px;            
+        }
+        .MFontLightLeftBorder
+        {
+            font-family:Arial;
+            font-size:16px;  
+            border-left:2px solid #000000;          
+            text-align:center; 
+        }
+
+        .MFontLightCenter
+        {
+            font-family:Arial;
+            font-size:16px;  
+            text-align:center;     
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+        .MFontR
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            text-align:right;
+            padding-right:5px;
+        }
+        .MFontL
+        {
+            font-family:Arial;
+            font-size:18px;
+            font-weight:bold;
+            text-align:left;
+            padding-right:5px;
+        }
+
+        .sFont
+        {
+            font-family:Arial;
+            font-size:8px;            
+            
+        }
+
+        .del
+        {border-left:2px solid #000000;
+         width:2px;
+        }
+
+        .LeftBottomBorder
+        {
+            border-left:2px solid #000000;          
+            border-bottom:2px solid #000000;     
+            
+        }
+
+        li
+        {
+            margin-bottom:20px;
+        }
+
+        .auto-style
+        {
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 5px;
+            height: 30px;
+            width:90%
+        }
+        .auto-style0
+        {
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 5px;
+            height: 30px;
+            width:10%
+        }
+
+        
+        .auto-style2
+        {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;
+            height: 34px;
+        }
+        .auto-style3
+        {
+            font-family: Arial;
+            font-size: 16px;
+            height: 34px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- OPTIONS -->
+        
+        <table width="100%" cellspacing="3" cellpadding="3">
+            <tr>
+                <td class="topFont" width="40%"><img src="/Images/ReportLogo.jpg" />
+                </td>
+                <td class="topFont">TVR Work Order No {WOID}</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="HFont">{QBCC}</td>
+            </tr>
+            <tr>
+                <td class="HFontR"></td>
+                <td class="HFont">Date:&nbsp;{WODate}</td>                
+            </tr>
+            <tr>
+                <td class="HFontR"></td>
+                <td><font class="HFont">For:&nbsp;{Subcontractor}</font> <font class="reg">&nbsp;&nbsp;(Subcontractor)</font></td>                
+            </tr>
+        </table>
+        <!-- WO BRIEF -->
+        <table width="100%" >
+            <tr>
+                <td width="50%" valign="top" style="border:1px solid #000000;">
+                            <table width="100%" cellspacing="3" cellpadding="3">
+                                <tr>
+                                    <td class="HFont" width="180">Client Details</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Client Reference:</td>
+                                    <td class="MFontLight">{supplier_ref}</td>
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Clients Name:</td>
+                                    <td class="MFontLight">{Insured}</td>                
+                                </tr>
+
+                                <tr>
+                                    <td class="MFont">Incident Address:</td>
+                                    <td class="MFontLight">{PropertyAddress}</td>
+                                </tr>
+                                <tr>
+                                    <td class="MFont">&nbsp;</td>
+                                    <td class="MFontLight">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Contact Numbers:</td>
+                                    <td class="MFontLight">{InsuredPhone}{InsuredMobile}</td>
+                                </tr>
+                            </table>
+                </td>
+
+                <td width="50%" valign="top" style="border:1px solid #000000;">
+                            <table width="100%" cellspacing="3" cellpadding="3">
+                                <tr>
+                                    <td class="HFont" width="180">Maincom Details</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Our Reference:</td>
+                                    <td class="MFontLight">{SEARCH_CODE}</td>                
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Supervisor:</td>
+                                    <td class="MFontLight">{Estimator}</td>                
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Telephone:</td>
+                                    <td class="MFontLight">{EstimatorPhone}</td>                
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Fax:</td>
+                                    <td class="MFontLight">1300 342 358</td>                
+                                </tr>
+                                <tr>
+                                    <td class="MFont">Email:</td>
+                                    <td class="MFontLight">{EstimatorEmail}</td>                
+                                </tr>
+
+                            </table>
+                </td>
+
+            </tr>
+        </table>
+        <br />
+        <!-- WorkOrder Items -->
+        <table width="100%" style="border:2px solid #000000" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <!-- header -->
+                    <table width="100%" style="border-bottom:2px solid #000000; height:30px;">
+                        <tr>
+                            <td class="HFont">TVR ORDER DETAILS</td>
+                        </tr>
+                    </table>
+                    <!-- items -->
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="MFontColored" width="60%" >Start Date: {WOStartDate}&nbsp;&nbsp;&nbsp;&nbsp;Completion Date: {WOCompleteDate}</td>
+                            
+                            <td colspan="3" class="MFontLightCenter">Materials</td>
+                            <td colspan="3" class="MFontLightCenter">Labour</td>
+                        </tr>
+                        <tr style="height:30px;">
+                            <td class="MFont">Scope of Works ('Works')</td>
+                            
+                            <td class="MFontLightLeftBorder">QTY</td>
+                            <td class="MFontLightLeftBorder">UNIT</td>
+                            <td class="MFontLightLeftBorder">TOTAL</td>
+
+                            <td class="MFontLightLeftBorder">QTY</td>
+                            <td class="MFontLightLeftBorder">UNIT</td>
+                            <td class="MFontLightLeftBorder">TOTAL</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="sFont">
+                                The Subcontractor is to carry out the following works and everything else incidental to those works or which can be
+                                inferred from those works, including the supply of all equipment and materials, and the carrying out of all obligations
+                                which may be reasonable and necessary to bring about the contractual result, are called 'the Works'
+
+                            </td>
+                            
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td >&nbsp;</td>
+                            
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+
+                        </tr>
+<!-- WOItems -->
+                        <tr>
+                            <td class="MFont">{Room}</td>
+                            
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                            <td class="MFontLightLeftBorder">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="MFontLight">{WOItem}</td>
+                            
+                            <td class="MFontLightLeftBorder">{m_quantity}</td>
+                            <td class="MFontLightLeftBorder">{MaterialUnit}</td>
+                            <td class="MFontLightLeftBorder">{m_cost_total}</td>
+
+                            <td class="MFontLightLeftBorder">{l_quantity}</td>
+                            <td class="MFontLightLeftBorder">{LabourUnit}</td>
+                            <td class="MFontLightLeftBorder">{l_cost_total}</td>
+
+                        </tr>
+
+                        <!-- end of items -->
+                        <tr>
+                            <td >&nbsp;</td>
+                            
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+
+                        </tr>
+<!-- WOItems -->
+                        <tr>
+                            <td  class="MFontL">It is your own responsibility to remove all related waste during and upon completion of your works.</td>
+                            
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+                            <td class="LeftBottomBorder">&nbsp;</td>
+
+                        </tr>
+
+
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+        <table width="100%" style="border:2px solid #000000; background-color:#C0C0C0;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="right"  class="auto-style">Total (ex. GST)&nbsp;&nbsp;</td>
+                <td class="auto-style0">${WorkOrderAmount}</td>
+            </tr>
+        </table>
+
+        <table width="100%" style="border:2px solid #000000; background-color:#C0C0C0;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td  align="right" class="auto-style">Grand Total (GST Inc)&nbsp;&nbsp;</td>
+                <td class="auto-style0">${WorkOrderAmountWithGST}</td>
+            </tr>
+        </table>
+        <br />
+        <table width="100%" style="border:2px solid #000000;" cellpadding="0" cellspacing="0">
+            <tr style="height:30px;">
+                <td class="MFont">Special Conditions:</td>
+            </tr>
+            <tr>
+                <td class="MFontLight">{SupplierNotes}</td>
+            </tr>
+        </table>
+        <br />
+        <table width="100%" cellpadding="3" cellspacing="3">
+            <tr style="height:30px;">
+                <td class="MFont">The Subcontractor agrees, acknowledges and represents that:</td>
+            </tr>
+            <tr>
+                <td class="MFontLight">
+                    <ol>
+                        <li>
+                            By agreeing to undertake the works the subject of this 
+                            TVR Work Order, the Subcontractor agrees and acknowledges that this TVR
+Work Order together with the TVR Work Order Conditions previously accepted by the TVR Agreement terms and conditions
+on which the Subcontractor is engaged by Maincom Services to carry out the works the subject of this TVR Work Order; and
+                        </li>
+                        <li>
+                            is bound by the TVR Work Order Conditions which are incorporated into this TVR Work Order as though repeated in this TVR Work Order
+and the particulars below constitute the Order Details as referred to in TVR Work Order Terms and Conditions.
+                        </li>
+                        <li>
+The above TVR Work Order dates are binding and any variance to these dates must be communicated to the relevant
+Supervisor as per this TVR Work Order.
+                        </li>
+                    </ol>
+
+
+                </td>
+            </tr>
+        </table>
+<br />
+
+        <table width="100%" style="border:2px solid #000000;" cellpadding="5" cellspacing="5">
+            <tr style="height:30px;">
+                <td class="HFont" colspan="2">ORDER DETAILS</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" width="90px">Clause 5</td>
+                <td class="MFontLight">Subcontractor has Design responsibility: No</td>
+            </tr>
+            <tr>            
+                <td class="auto-style2">Clause 8</td>
+                <td class="auto-style3">Rate of Liquidated Damages:$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /calendar day</td>
+            </tr>
+            <tr>            
+                <td class="auto-style2">Clause 9</td>
+                <td class="auto-style3">Defects Liability Period: In accordance with the relevant Building Act (up to 6 years)</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" valign="top">Clause 10</td>
+                <td class="MFontLight">When claim(s) to be made - Upon Completion of the TVR Works and to the satisfaction of Maincom.
+Time of Payment: 30 days Bi-Monthly from the 15th or last day of the month in which the claim for payment is made.</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" valign="top">Clause 11</td>
+                <td class="MFontLight">Retention to be held: as per TVR Agreement<br />
+                </td>
+            </tr>
+
+        </table>
+        <br />
+        <table style="border:2px solid #000000; width:auto;" cellpadding="5" cellspacing="5">
+            <tr>            
+                <td class="HFontsmall" >Insurance details</td>
+                <td class="MFontLight">Type</td>
+                <td class="MFontLight" >Policy No.</td>
+                <td class="MFontLight">Expiry date</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" >Clause 13</td>
+                <td class="MFontLight">Public Liability</td>
+                <td class="MFontLight" >{PublicLiability}</td>
+                <td class="MFontLight">{PublicLiabilityDate}</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" >Clause 13</td>
+                <td class="MFontLight">Workers Compensation</td>
+                <td class="MFontLight" >{WorkersCompensation}</td>
+                <td class="MFontLight">{WorkersCompensationDate}</td>
+            </tr>
+            <tr>            
+                <td class="HFontsmall" >Clause 13</td>
+                <td class="MFontLight">Licence Number</td>
+                <td class="MFontLight" >{LicenceNumber}</td>
+                <td class="MFontLight">{LicenceNumberDate}</td>
+            </tr>
+
+        </table>
+                
+    </form>
+</body>
+</html>
+
